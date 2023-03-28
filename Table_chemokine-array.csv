@@ -1,0 +1,77 @@
+﻿Label,Coordinates,Condition
+1,A1,Reference Spots
+2,A2,Reference Spots
+3,A19,Reference Spots
+4,A20,Reference Spots
+5,B3,6Ckine
+6,B4,6Ckine
+7,B5,CCL28
+8,B6,CCL28
+9,B7,CXCL16
+10,B8,CXCL16
+11,B9,Chemerin
+12,B10,Chemerin
+13,B11,ENA-78
+14,B12,ENA-78
+15,B13,Eotaxin-3
+16,B14,Eotaxin-3
+17,B15,Fractalkine
+18,B16,Fractalkine
+19,B17,GROα
+20,B18,GROα
+21,C3,HCC-1
+22,C4,HCC-1
+23,C5,I-309
+24,C6,I-309
+25,C7,IL-8
+26,C8,IL-8
+27,C9,IL-16
+28,C10,IL-16
+29,C11,IP-10
+30,C12,IP-10
+31,C13,I-TAC
+32,C14,I-TAC
+33,C15,Lymphotactin
+34,C16,Lymphotactin
+35,C17,MCP-1
+36,C18,MCP-1
+37,D3,MCP-3
+38,D4,MCP-3
+39,D5,MDC
+40,D6,MDC
+41,D7,Midkine
+42,D8,Midkine
+43,D9,MIG
+44,D10,MIG
+45,D11,MIP-1α/β
+46,D12,MIP-1α/β
+47,D13,MIP-1δ
+48,D14,MIP-1δ
+49,D15,MIP-3α
+50,D16,MIP-3α
+51,D17,MIP-3β
+52,D18,MIP-3β
+53,E3,NAP-2
+54,E4,NAP-2
+55,E5,PARC
+56,E6,PARC
+57,E7,PF4
+58,E8,PF4
+59,E9,RANTES
+60,E10,RANTES
+61,E11,SDF-1
+62,E12,SDF-1
+63,E13,TARC
+64,E14,TARC
+65,E15,VCC-1
+66,E16,VCC-1
+67,F3,Fibrinogen(Sample Control)
+68,F4,Fibrinogen(Sample Control)
+69,F5,gp130(Sample Control)
+70,F6,gp130(Sample Control)
+71,F7,Transferrin R (Sample Control)
+72,F8,Transferrin R (Sample Control)
+73,F9,Negative Control
+74,F10,Negative Control
+75,G1,Reference Spots
+76,G2,Reference Spots
