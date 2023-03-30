@@ -3,7 +3,11 @@
 Repository with Python code in a Jupyter Notebookto to perform automated (image) analysis on dotblot data.
 
 ## Introduction 
-Levels of chemokines are measured through an array that produces a dotblot as result (https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data and its level out of it. Previously, dot blot quantification has tipically been done manually. Thus, the goal is to automate this process by creating a pipeline of code in ‘Python’. 
+Levels of chemokines are measured through an array that produces a dotblot as result (https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data on levels.
+
+![](https://raw.githubusercontent.com/JoachimGoedhart/DotBlot-analysis/main/Dotblot_Example-data.png)
+
+Previously, dot blot quantification has tipically been done manually. Thus, the goal is to automate this process by creating a pipeline of code in ‘Python’. 
 
 Therefore, the aim of this Jupyter Notebook is to automatize the process of registering each single dotblots to the mask, to get the grey value from each dot, and finally to arrange the values in a tidy table to allow for a faster and easier analysis.
 
