@@ -1,3 +1,5 @@
+![https://colab.research.google.com/github/JoachimGoedhart/DotBlot-analysis/blob/main/DotBlot_analysis.ipynb](https://colab.research.google.com/assets/colab-badge.svg)
+
 # DotBlot-analysis
 
 Repository with Python code in a Jupyter Notebookto to perform automated (image) analysis on dotblot data.
