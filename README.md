@@ -9,19 +9,24 @@
 Repository with Python code in a Jupyter Notebookto to perform automated (image) analysis on dotblot data.
 
 ## Introduction 
-Levels of chemokines are measured through an array that produces a dotblot as result (https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data on levels.
+Levels of chemokines are measured through an array that produces a [dotblot as result](https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data on levels.
 
 ![](https://raw.githubusercontent.com/JoachimGoedhart/DotBlot-analysis/main/Dotblot_Example-data.png)
 
 Previously, dot blot quantification has tipically been done manually. Thus, the goal is to automate this process by creating a pipeline of code in ‘Python’. 
 
-Therefore, the aim of this Jupyter Notebook is to automatize the process of registering each single dotblots to the mask, to get the grey value from each dot, and finally to arrange the values in a tidy table to allow for a faster and easier analysis.
+Therefore, the aim of this Jupyter Notebook is to automatize the process of registering each single dotblots to the mask, to get the grey value from each dot, and finally to arrange the values in a [tidy table](https://thenode.biologists.com/converting-excellent-spreadsheets-tidy-data/education/)to allow for a faster and easier analysis.
 
-## How to use this Notebook 
-Before you run the Notebook, make sure that you are logged into your Google account and have the data to process in your Google Drive. 
 ## Before Starting 
+Before you run the Notebook, make sure that you are logged into your Google account and have the data to process in your Google Drive. 
+
 For the code to work, Images must be 700x300 and in .tif format. This is best done in ImageJ before starting the analysis. 
-## Load Packages 
+
+It's important to know that if you don’t provide data, you can still run the notebook, and it will use example data.
+## Initialization 
+This section will load all the required packages and data necessary for the proper functioning of this Notebook.
+
+### Packages 
 GoogleCoLab provides pre-installed packages that need to be imported by running the code. These include: 
 -	Os
 -	Matplotlib
@@ -29,9 +34,16 @@ GoogleCoLab provides pre-installed packages that need to be imported by running 
 - Pandas
 -	Skimage
 
-Other libraries, such as pystackreg, must be installed as an extra. 
+Other libraries, such as pystackreg, must be installed as an extra.
+
+### Load Data 
+The required data and the example data: 
+-	The first mask is going to be the one used to get values out of every labeled dot. 
+-	The second one is used to register the images to the Reference Spots only
+-	The Table consists of the list of conditions of each Human Chemokine Array coordinates taken from the protocol. 
+
 ## Mount Drive 
-The most important step to make this Notebook work is to mount the personal Drive to the GoogleCoLab. To do that, “Run” the code and accept to access your Drive. 
+To make this Notebook work it is required to mount the personal Drive to the GoogleCoLab. To do that, “Run” the code and accept to access your Drive. 
 If you click on the left, on the folder icon, your Drive folder should appear with all your personal organized Drive that you are able to access freely. 
 ## Directories 
 Once you are connected to your personal Drive you can access the data. To make the workspace clear and neat I divided the data in folders (“directories”): 
@@ -39,12 +51,6 @@ Once you are connected to your personal Drive you can access the data. To make t
 -	Out_dir = folder where all the output files are going to end up (registered images in grayscale, and long format tables with grey values) 
 
 To give the right directions, go on the three dots next to the folder of interest and click on “Copy path”, then past this in the right correspondent directory. 
-## Load Data 
-Here we load the required data from the correspondent directory: 
--	The first mask is going to be the one used to get values out of every labeled dot. 
--	The second one is used to register the images to the Reference Spots only
--	The Table consists of the list of conditions of each Human Chemokine Array coordinates taken from the protocol. 
 
 ## Registration 
-This loop will access the TIF files folder and consequently register, quantify, and design output tables for each file. 
-
+This loop will access the TIF files folder and consequently register, quantify, and design output tables for each one of the files. "Run" the code and check the output down below. Note that CSV files and overlays of the dotblot with the mask will be saved in the directory that you specified as ’out_dir’.
