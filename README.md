@@ -9,13 +9,11 @@
 Repository with Python code in a Jupyter Notebookto to perform automated (image) analysis on dotblot data.
 
 ## Introduction 
-Levels of chemokines are measured through an array that produces a [dotblot as result](https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data on levels.
+Levels of chemokines are measured through an array that produces a [dotblot as result](https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data on levels.Previously, dot blot quantification has tipically been done manually.
 
 ![](https://raw.githubusercontent.com/JoachimGoedhart/DotBlot-analysis/main/Dotblot_Example-data.png)
 
-Previously, dot blot quantification has tipically been done manually. Thus, the goal is to automate this process by creating a pipeline of code in ‘Python’. 
-
-Therefore, the aim of this Jupyter Notebook is to automatize the process of registering each single dotblots to the mask, to get the grey value from each dot, and finally to arrange the values in a [tidy table](https://thenode.biologists.com/converting-excellent-spreadsheets-tidy-data/education/)to allow for a faster and easier analysis.
+Therefore, the aim of this Jupyter Notebook is to automate the processing and analysis of dotblots.The different steps are registering each single dotblot to the mask, to get the grey value from each dot, and finally to arrange the values in a [tidy table](https://thenode.biologists.com/converting-excellent-spreadsheets-tidy-data/education/)to allow for a reproducible analysis.
 
 ## Before Starting 
 Before you run the Notebook, make sure that you are logged into your Google account and have the data to process in your Google Drive. 
@@ -23,6 +21,9 @@ Before you run the Notebook, make sure that you are logged into your Google acco
 For the code to work, Images must be 700x300 and in .tif format. This is best done in ImageJ before starting the analysis. 
 
 It's important to know that if you don’t provide data, you can still run the notebook, and it will use example data.
+
+If any of the steps fail, it is suggested to file the issue on GitHub. 
+
 ## Initialization 
 This section will load all the required packages and data necessary for the proper functioning of this Notebook.
 
@@ -50,7 +51,7 @@ Once you are connected to your personal Drive you can access the data. To make t
 -	In_dir = folder with the TIF files (700x300) of the dotblot that must be analysed 
 -	Out_dir = folder where all the output files are going to end up (registered images in grayscale, and long format tables with grey values) 
 
-To give the right directions, go on the three dots next to the folder of interest and click on “Copy path”, then past this in the right correspondent directory. 
+To give the right directions, go next to the folder of interest on ‘Options’ (three dots) and click on “Copy path”, then paste this in the form for the correspondent directory.
 
 ## Registration 
 This loop will access the TIF files folder and consequently register, quantify, and design output tables for each one of the files. "Run" the code and check the output down below. Note that CSV files and overlays of the dotblot with the mask will be saved in the directory that you specified as ’out_dir’.
