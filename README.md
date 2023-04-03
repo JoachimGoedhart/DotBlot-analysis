@@ -1,4 +1,8 @@
-![https://colab.research.google.com/github/JoachimGoedhart/DotBlot-analysis/blob/main/DotBlot_analysis.ipynb](https://colab.research.google.com/assets/colab-badge.svg)
+
+
+
+[![Foo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoachimGoedhart/DotBlot-analysis/blob/main/DotBlot_analysis.ipynb)
+
 
 # DotBlot-analysis
 
