@@ -47,7 +47,7 @@ If you run into trouble, or want to request a feature, file [an issue](https://g
 ### Credits
 
 - [Nico Schramma](https://twitter.com/nicoschramma) improved the registration
-- A similar workflow that uses ImageJ/FIJI is reported by Anna H. Klemm: [https://f1000research.com/articles/9-1385]
+- A similar workflow that uses ImageJ/FIJI is reported in this paper: [https://f1000research.com/articles/9-1385]
 - The paper on [ZeroCostDL4Mic](https://www.nature.com/articles/s41467-021-22518-0) inspired us to use Google Colab
 
 
