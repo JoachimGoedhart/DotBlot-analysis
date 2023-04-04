@@ -9,56 +9,35 @@
 Repository with Python code in a Jupyter Notebookto to perform automated (image) analysis on dotblot data.
 
 ## Introduction 
-Levels of chemokines are measured through an array that produces a [dotblot as result](https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data on levels.Previously, dot blot quantification has tipically been done manually.
+Levels of chemokines are measured through an array that produces a [dotblot as result](https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b). Every dot is linked to different antibodies, and we must quantify it in order to get informative data on levels. Previously, dot blot quantification has typically been done manually.
 
 ![](https://raw.githubusercontent.com/JoachimGoedhart/DotBlot-analysis/main/Dotblot_Example-data.png)
 
-Therefore, the aim of this Jupyter Notebook is to automate the processing and analysis of dotblots.The different steps are registering each single dotblot to the mask, to get the grey value from each dot, and finally to arrange the values in a [tidy table](https://thenode.biologists.com/converting-excellent-spreadsheets-tidy-data/education/)to allow for a reproducible analysis.
+Therefore, the aim of this Jupyter Notebook is to automate the processing and analysis of dotblots. The different steps are registering each single dotblot to the mask, to get the grey value from each dot, and finally to arrange the values in a [tidy table](https://thenode.biologists.com/converting-excellent-spreadsheets-tidy-data/education/) to allow for a reproducible (and possibly automated) analysis.
 
 ## Before Starting 
 
 To run the program on Google Colab, ensure that the data is saved in your Google Drive. Alternatively, if you prefer to use as Jupyter Notebook, download the Notebook and ensure that the data is stored in a local directory.
 
-For the code to work, Images must be 700x300 and in .tif format. This is best done in ImageJ before starting the analysis. 
+For the code to work, Images must be 700 by 300 pixels (width x height) and in .tif format. This is best done in FIJI/ImageJ before starting the analysis. 
 
-It's important to know that if you don’t provide data, you can still run the notebook, and it will use example data.
+If you don’t provide data, the notebook will still run and use example data.
 
-If any of the steps fail, it is suggested to file the issue on GitHub. 
+If any of the steps fail, it is suggested to file [an issue](https://github.com/JoachimGoedhart/DotBlot-analysis/issues) on GitHub. 
 
-## Initialization 
-This section will load all the required packages and data necessary for the proper functioning of this Notebook.
+## Initialization & Packages
 
-In case you are running the Notebook on Jupyter Notebook instead of directly on CoLab, please make sure to install the required libraries in your terminal prior to executing the code.
+The notebook requires several libraries and these will be remotely initialized in Google Colab. If you are running the notebook locally, you need to install the relevant packages in your environment.
 
-### Packages 
-GoogleCoLab provides pre-installed packages that need to be imported by running the code. These include: 
--	Os
--	Matplotlib
--	Numpy
-- Pandas
--	Skimage
+## Data input and output 
 
-Other libraries, such as pystackreg, must be installed as an extra.
+The notebook loads all TIF files from a directory (specified as `in_dir`). When running it on Colab, make sure that the TIF files are on your Drive in a single folder. The resulting registered images and CSV files will be stored in another directory (`out_dir`)
 
-### Load Data 
-The required data and the example data: 
--	The first mask is going to be the one used to get values out of every labeled dot. 
--	The second one is used to register the images to the Reference Spots only
--	The Table consists of the list of conditions of each Human Chemokine Array coordinates taken from the protocol. 
 
-## Mount Drive 
-To make this Notebook work it is required to mount the personal Drive to the GoogleCoLab. To do that, “Run” the code and accept to access your Drive. 
-If you click on the left, on the folder icon, your Drive folder should appear with all your personal organized Drive that you are able to access freely.
-This step is optional if you are using Jupyter Notebook. In that case, you may skip to step 3.
+### Credits
 
-## Directories 
-Once you are connected to your personal Drive you can access the data. To make the workspace clear and neat I divided the data in folders (“directories”): 
--	In_dir = folder with the TIF files (700x300) of the dotblot that must be analysed 
--	Out_dir = folder where all the output files are going to end up (registered images in grayscale, and long format tables with grey values) 
+- Nico Schramma helped to improve the registration
+- A similar workflow that uses ImageJ/FIJI is reported by Anna H. Klemm: [https://f1000research.com/articles/9-1385]
 
-To give the right directions, go next to the folder of interest on ‘Options’ (three dots) and click on “Copy path”, then paste this in the form for the correspondent directory.
 
-If you're using Jupyter Notebook, make sure that you are in the right directory in your Terminal, then navigate to the correct folder and copy the folder name into the designated space. After that, you can proceed with the rest of the notebook without needing to make any other changes.
 
-## Registration 
-This loop will access the TIF files folder and consequently register, quantify, and design output tables for each one of the files. "Run" the code and check the output down below. Note that CSV files and overlays of the dotblot with the mask will be saved in the directory that you specified as ’out_dir’.
