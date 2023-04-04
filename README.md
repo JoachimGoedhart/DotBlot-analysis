@@ -36,7 +36,7 @@ The notebook loads all TIF files from a directory (specified as `in_dir`). When 
 
 ### Credits
 
-- Nico Schramma helped to improve the registration
+- [Nico Schramma](https://twitter.com/nicoschramma) improved the registration
 - A similar workflow that uses ImageJ/FIJI is reported by Anna H. Klemm: [https://f1000research.com/articles/9-1385]
 
 
