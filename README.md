@@ -21,8 +21,9 @@ Therefore, the aim of this Jupyter Notebook is to automate the processing and an
 
 To run the program on Google Colab, ensure that the data is saved in your Google Drive. Alternatively, if you prefer to use as Jupyter Notebook, download the Notebook and ensure that the data is stored in a local directory.
 
-For the code to work, Images of dotblots must be 700 by 300 pixels (width x height) and in .tif format. This is best done in FIJI/ImageJ before starting the analysis. A file that defines an ROI of the correct size in FIJI/ImageJ is included in this repo (700x300.roi). To use it, open an image and drop the `700x300.roi` file on the toolbar to add it to the image. You can move it around and use 'Image > Duplicate...' to extract the image in the right dimensions.
+For the code to work, Images of dotblots must be 700 by 300 pixels (width x height) and in .tif format. This can be done in FIJI/ImageJ before starting the analysis. A file that defines an ROI of the correct size in FIJI/ImageJ is included in this repo (700x300.roi). To use it, open an image and drop the `700x300.roi` file on the toolbar to add it to the image. You can move it around and use 'Image > Duplicate...' to extract the image in the right dimensions. See also below for a demo:
 
+![](https://github.com/JoachimGoedhart/DotBlot-analysis/raw/main/Rescale_700x300.gif)
 
 ## Initialization & Packages
 
